@@ -1,0 +1,15 @@
+/*[
+	{
+		"button": "button1", "count": 1,
+		"press_command": "mathematica_click_select"
+	},
+	{
+		"button": "button1", "count": 2,
+		"press_command": "mathematica_click_select",
+	},
+	{
+		"button": "button1", "count": 3,
+		"press_command": "mathematica_click_select",
+	}
+]
+*/
