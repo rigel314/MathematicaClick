@@ -30,8 +30,10 @@ class ClickDetector(sublime_plugin.EventListener) :
 	def __init__(self) :
 		self.time = time.time()
 	def on_text_command(self, view, name, args) :
-		if name == 'drag_select':
-			thing = time.time() - self.time
-			self.time = time.time()
-			if thing < .5:
-				return ('mathematica_click_select')
+		sublime.status_message(view.settings().get('syntax'))
+		if view.settings().get('syntax').find('Find Results') == -1 :
+			if name == 'drag_select':
+				thing = time.time() - self.time
+				self.time = time.time()
+				if thing < .5:
+					return ('mathematica_click_select')
